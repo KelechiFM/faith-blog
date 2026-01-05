@@ -1,68 +1,62 @@
 "use client";
 
+import FeaturedPost from "@/components/FeaturedPost";
+import BlogCard from "@/components/BlogCard";
+import Newsletter from "@/components/Newsletter";
+import ScrollReveal from "@/components/ScrollReveal";
+import GlassCard from "@/components/GlassCard";
 import Link from "next/link";
 import { posts } from "@/lib/data";
-import { motion } from "framer-motion";
 
 export default function Home() {
+  const featuredPost = posts.find((p) => p.featured) || posts[0];
+  const latestPosts = posts.filter((p) => p.id !== featuredPost.id).slice(0, 3);
+
   return (
-    <div className="max-w-4xl mx-auto px-6 pb-24">
+    <div className="max-w-6xl mx-auto px-6">
+      {/* Hero / Featured Post */}
+      <GlassCard className="mt-12 mb-20 !p-0 overflow-hidden" delay={0.2}>
+        <FeaturedPost post={featuredPost} />
+      </GlassCard>
 
-      {/* Minimal Hero */}
-      <section className="py-32 md:py-48">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="space-y-6"
-        >
-          <h1 className="text-6xl md:text-8xl font-display font-bold tracking-tighter text-foreground leading-[0.9]">
-            Engineering <br />
-            <span className="text-muted-foreground">the Future.</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl font-light">
-            Explorations in code, design, and the philosophy of building things.
-          </p>
-        </motion.div>
-      </section>
+      {/* Latest Stories */}
+      <section className="mb-24">
+        <ScrollReveal className="flex items-end justify-between mb-12">
+          <h2 className="text-4xl lg:text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">Latest Stories</h2>
+          <Link href="/blog" className="hidden md:inline-block text-sm font-medium text-indigo-300 hover:text-white transition-colors">View all articles →</Link>
+        </ScrollReveal>
 
-      {/* Blog List - Minimal & Interactive */}
-      <section>
-        <div className="flex items-end justify-between mb-12 border-b border-border pb-4">
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground">Latest Writing</h2>
-          <Link href="/blog" className="text-sm font-medium hover:text-brand transition-colors">View Archive</Link>
-        </div>
-
-        <div className="flex flex-col gap-4">
-          {posts.slice(0, 4).map((post, index) => (
-            <motion.div
-              key={post.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-            >
-              <Link href={`/blog/${post.slug}`} className="group block">
-                <article className="flex flex-col md:flex-row md:items-baseline justify-between py-6 border-b border-border/50 group-hover:border-brand/30 transition-colors">
-                  <div className="md:w-3/4">
-                    <h3 className="text-2xl font-display font-semibold mb-2 group-hover:text-brand transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="text-muted-foreground line-clamp-2 md:line-clamp-1">
-                      {post.excerpt}
-                    </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {latestPosts.map((post, i) => (
+            <GlassCard key={post.id} className="h-full !p-0 overflow-hidden group flex flex-col transition-all hover:scale-[1.02]" delay={0.1 * i}>
+              <Link href={`/blog/${post.slug}`} className="flex flex-col h-full">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img src={post.image} alt={post.title} className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" />
+                </div>
+                <div className="p-6 flex-1 flex flex-col">
+                  <div className="flex items-center gap-3 mb-3 text-xs font-mono text-indigo-300">
+                    <span>{post.date}</span>
+                    <span className="w-px h-3 bg-indigo-500/30"></span>
+                    <span>{post.category}</span>
                   </div>
-                  <div className="md:w-1/4 md:text-right mt-2 md:mt-0">
-                    <time className="text-xs font-mono text-muted-foreground border border-border px-2 py-1 rounded-sm uppercase">
-                      {post.date}
-                    </time>
-                  </div>
-                </article>
+                  <h3 className="text-xl font-display font-bold mb-3 leading-snug group-hover:text-indigo-300 transition-colors">{post.title}</h3>
+                  <p className="text-sm text-slate-300 line-clamp-2 mb-4 flex-1">{post.excerpt}</p>
+                  <span className="text-xs font-bold text-white uppercase tracking-wider group-hover:text-indigo-300 transition-colors">Read Article</span>
+                </div>
               </Link>
-            </motion.div>
+            </GlassCard>
           ))}
         </div>
+
+        <div className="mt-10 text-center md:hidden">
+          <Link href="/blog" className="inline-block text-sm font-medium text-indigo-300 hover:text-white">View all articles →</Link>
+        </div>
       </section>
 
+      {/* Newsletter */}
+      <GlassCard className="mb-20 py-8">
+        <Newsletter />
+      </GlassCard>
     </div>
   );
 }
