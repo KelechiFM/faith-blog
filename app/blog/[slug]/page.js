@@ -22,15 +22,15 @@ export default async function BlogPostPage({ params }) {
         <article className="max-w-4xl mx-auto px-6 py-12">
             {/* Header */}
             <ScrollReveal className="text-center max-w-2xl mx-auto mb-12">
-                <div className="text-sm font-bold uppercase tracking-widest text-indigo-300 mb-4">
+                <div className="text-sm font-bold uppercase tracking-widest text-white mb-4">
                     {post.category}
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight text-white">
                     {post.title}
                 </h1>
-                <div className="text-indigo-200 text-sm border-t border-b border-white/10 py-4 inline-flex items-center space-x-4">
+                <div className="text-slate-100 text-sm border-t border-b border-white/10 py-4 inline-flex items-center space-x-4">
                     <span>{post.date}</span>
-                    <span className="w-1 h-1 bg-indigo-400 rounded-full"></span>
+                    <span className="w-1 h-1 bg-white rounded-full"></span>
                     <span>By Faith</span>
                 </div>
             </ScrollReveal>
@@ -45,7 +45,8 @@ export default async function BlogPostPage({ params }) {
             </ScrollReveal>
 
             {/* Content */}
-            <div className="max-w-2xl mx-auto prose prose-invert prose-lg prose-headings:font-display prose-headings:font-bold prose-headings:text-white prose-p:text-slate-200 prose-a:text-indigo-300 prose-li:text-slate-200 prose-blockquote:border-l-indigo-400 prose-blockquote:text-indigo-100 font-light leading-loose">
+            {/* Content */}
+            <div className="max-w-2xl mx-auto prose prose-xl prose-invert prose-headings:font-display prose-headings:font-bold prose-headings:!text-white prose-p:!text-slate-100 prose-a:!text-white prose-a:underline prose-li:!text-slate-100 prose-strong:!text-white prose-blockquote:!border-l-white prose-blockquote:!text-slate-100 font-light leading-loose [&_p]:!text-white [&_li]:!text-white [&_h1]:!text-white [&_h2]:!text-white [&_h3]:!text-white [&_blockquote]:!text-white [&_strong]:!text-white">
                 <ScrollReveal>
                     <div dangerouslySetInnerHTML={{ __html: post.content }} />
                 </ScrollReveal>
@@ -53,7 +54,7 @@ export default async function BlogPostPage({ params }) {
 
             {/* Share / Tags Placeholder */}
             <div className="max-w-2xl mx-auto mt-16 pt-8 border-t border-white/10">
-                <p className="text-center text-sm font-medium italic text-indigo-200">
+                <p className="text-center text-sm font-medium italic text-slate-200">
                     "Share this with someone who needs a little peace today."
                 </p>
             </div>

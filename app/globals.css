@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #faf9f6;
-  /* Off-white / Cream */
-  --foreground: #1c1917;
-  /* Warm Charcoal */
+  --background: #020617;
+  /* Slate 950 */
+  --foreground: #ffffff;
+  /* White */
   --accent: #d97706;
   /* Amber/Gold */
-  --muted: #57534e;
-  /* Stone gray */
-  --border: #e7e5e4;
-  /* Light stone */
+  --muted: #94a3b8;
+  /* Slate 400 */
+  --border: #1e293b;
+  /* Slate 800 */
 }
 
 @theme inline {
