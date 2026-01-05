@@ -1,11 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #faf9f6; /* Off-white / Cream */
-  --foreground: #1c1917; /* Warm Charcoal */
-  --accent: #d97706; /* Amber/Gold for subtle highlights */
-  --muted: #57534e; /* Stone gray */
-  --border: #e7e5e4; /* Light stone */
+  --background: #faf9f6;
+  /* Off-white / Cream */
+  --foreground: #1c1917;
+  /* Warm Charcoal */
+  --accent: #d97706;
+  /* Amber/Gold */
+  --muted: #57534e;
+  /* Stone gray */
+  --border: #e7e5e4;
+  /* Light stone */
 }
 
 @theme inline {
@@ -14,9 +19,23 @@
   --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-border: var(--border);
-  
-  --font-display: "Playfair Display", serif;
-  --font-sans: "Inter", sans-serif;
+
+  --font-display: var(--font-jakarta);
+  --font-sans: var(--font-montserrat);
+
+  --animate-fade-in: fade-in-up 0.8s ease-out forwards;
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 body {
@@ -27,8 +46,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
 }

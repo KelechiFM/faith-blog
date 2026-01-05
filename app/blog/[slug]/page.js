@@ -45,7 +45,7 @@ export default async function BlogPostPage({ params }) {
             </ScrollReveal>
 
             {/* Content */}
-            <div className="max-w-2xl mx-auto prose prose-neutral prose-lg prose-headings:font-display prose-headings:font-semibold prose-a:text-accent prose-img:rounded-sm">
+            <div className="max-w-2xl mx-auto prose prose-neutral prose-lg prose-headings:font-display prose-headings:font-semibold prose-a:text-accent prose-img:rounded-sm font-light leading-loose">
                 <ScrollReveal>
                     <div dangerouslySetInnerHTML={{ __html: post.content }} />
                 </ScrollReveal>
