@@ -30,10 +30,10 @@ export default function ContactPage() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 }}
                     >
-                        <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70">
+                        <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight mb-4 text-white">
                             Let's <br /> Create.
                         </h1>
-                        <p className="text-lg text-indigo-100/80 font-light max-w-md leading-relaxed">
+                        <p className="text-lg text-slate-100 font-light max-w-md leading-relaxed">
                             Whether you have a question, a project in mind, or just want to say hello — I'm always open to discussing new ideas.
                         </p>
                     </motion.div>
@@ -41,7 +41,7 @@ export default function ContactPage() {
                     <div className="space-y-4 pt-4">
                         <div className="flex items-center space-x-4 text-indigo-200">
                             <span className="w-12 h-[1px] bg-indigo-500/50"></span>
-                            <span className="text-sm font-mono tracking-widest uppercase">Contact</span>
+                            <span className="text-sm font-mono tracking-widest uppercase text-indigo-300">Contact</span>
                         </div>
                         <p className="text-xl font-medium text-white">hello@faithblog.com</p>
                     </div>
@@ -55,43 +55,43 @@ export default function ContactPage() {
                                 ✓
                             </div>
                             <h3 className="text-2xl font-semibold text-white mb-2">Message Sent</h3>
-                            <p className="text-indigo-200">I'll get back to you shortly.</p>
+                            <p className="text-slate-200">I'll get back to you shortly.</p>
                         </div>
                     ) : (
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="space-y-2">
-                                <label htmlFor="name" className="text-sm font-medium text-indigo-200 ml-1">Name</label>
+                                <label htmlFor="name" className="text-sm font-bold text-white ml-1">Name</label>
                                 <input
                                     type="text"
                                     id="name"
                                     required
-                                    className="w-full px-4 py-3 bg-black/20 border border-white/10 focus:border-indigo-400 focus:bg-black/30 text-white rounded-xl focus:outline-none transition-all placeholder:text-white/20"
+                                    className="w-full px-4 py-3 bg-black/20 border border-white/10 focus:border-indigo-400 focus:bg-black/30 text-white rounded-xl focus:outline-none transition-all placeholder:text-white/40"
                                     placeholder="Jane Doe"
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label htmlFor="email" className="text-sm font-medium text-indigo-200 ml-1">Email</label>
+                                <label htmlFor="email" className="text-sm font-bold text-white ml-1">Email</label>
                                 <input
                                     type="email"
                                     id="email"
                                     required
-                                    className="w-full px-4 py-3 bg-black/20 border border-white/10 focus:border-indigo-400 focus:bg-black/30 text-white rounded-xl focus:outline-none transition-all placeholder:text-white/20"
+                                    className="w-full px-4 py-3 bg-black/20 border border-white/10 focus:border-indigo-400 focus:bg-black/30 text-white rounded-xl focus:outline-none transition-all placeholder:text-white/40"
                                     placeholder="jane@example.com"
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label htmlFor="message" className="text-sm font-medium text-indigo-200 ml-1">Message</label>
+                                <label htmlFor="message" className="text-sm font-bold text-white ml-1">Message</label>
                                 <textarea
                                     id="message"
                                     rows={4}
                                     required
-                                    className="w-full px-4 py-3 bg-black/20 border border-white/10 focus:border-indigo-400 focus:bg-black/30 text-white rounded-xl focus:outline-none transition-all resize-none placeholder:text-white/20"
+                                    className="w-full px-4 py-3 bg-black/20 border border-white/10 focus:border-indigo-400 focus:bg-black/30 text-white rounded-xl focus:outline-none transition-all resize-none placeholder:text-white/40"
                                     placeholder="Tell me about your idea..."
                                 ></textarea>
                             </div>
                             <button
                                 type="submit"
-                                className="w-full py-4 bg-white text-indigo-900 font-bold rounded-xl hover:bg-indigo-50 transition-colors shadow-lg shadow-indigo-500/20"
+                                className="w-full py-4 bg-white text-indigo-950 font-bold rounded-xl hover:bg-indigo-50 transition-colors shadow-lg shadow-indigo-500/20"
                             >
                                 SEND MESSAGE
                             </button>

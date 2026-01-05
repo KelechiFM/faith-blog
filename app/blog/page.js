@@ -16,8 +16,8 @@ export default function BlogPage() {
     return (
         <div className="max-w-6xl mx-auto px-6 py-12 md:py-20">
             <ScrollReveal className="text-center mb-16">
-                <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60">The Journal</h1>
-                <p className="text-indigo-200 text-lg max-w-2xl mx-auto font-light leading-relaxed">
+                <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 text-white">The Journal</h1>
+                <p className="text-slate-100 text-lg max-w-2xl mx-auto font-light leading-relaxed">
                     Thoughts on faith, lifestyle, and the pursuit of a meaningful life.
                 </p>
             </ScrollReveal>
@@ -26,9 +26,9 @@ export default function BlogPage() {
             <ScrollReveal className="flex flex-wrap justify-center gap-4 mb-16">
                 <button
                     onClick={() => setActiveCategory("All")}
-                    className={`px-6 py-2 text-sm font-medium rounded-full transition-all border ${activeCategory === "All"
+                    className={`px-6 py-2 text-sm font-bold rounded-full transition-all border ${activeCategory === "All"
                         ? "bg-white text-indigo-950 border-white"
-                        : "bg-white/5 text-indigo-200 border-white/10 hover:bg-white/10"
+                        : "bg-white/5 text-slate-200 border-white/10 hover:bg-white/10 hover:text-white"
                         }`}
                 >
                     All
@@ -37,9 +37,9 @@ export default function BlogPage() {
                     <button
                         key={cat}
                         onClick={() => setActiveCategory(cat)}
-                        className={`px-6 py-2 text-sm font-medium rounded-full transition-all border ${activeCategory === cat
+                        className={`px-6 py-2 text-sm font-bold rounded-full transition-all border ${activeCategory === cat
                             ? "bg-white text-indigo-950 border-white"
-                            : "bg-white/5 text-indigo-200 border-white/10 hover:bg-white/10"
+                            : "bg-white/5 text-slate-200 border-white/10 hover:bg-white/10 hover:text-white"
                             }`}
                     >
                         {cat}
@@ -61,8 +61,8 @@ export default function BlogPage() {
                                     <span className="w-px h-3 bg-indigo-500/30"></span>
                                     <span>{post.category}</span>
                                 </div>
-                                <h3 className="text-xl font-display font-bold mb-3 leading-snug group-hover:text-indigo-300 transition-colors">{post.title}</h3>
-                                <p className="text-sm text-slate-300 line-clamp-2 mb-4 flex-1 font-light">{post.excerpt}</p>
+                                <h3 className="text-xl font-display font-bold mb-3 leading-snug text-white group-hover:text-indigo-300 transition-colors">{post.title}</h3>
+                                <p className="text-sm text-slate-200 line-clamp-2 mb-4 flex-1 font-light">{post.excerpt}</p>
                                 <span className="text-xs font-bold text-white uppercase tracking-wider group-hover:text-indigo-300 transition-colors">Read Article</span>
                             </div>
                         </Link>

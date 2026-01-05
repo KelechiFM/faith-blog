@@ -23,7 +23,7 @@ export default function Newsletter() {
                 <h3 className="text-2xl md:text-3xl font-display font-semibold mb-4 text-white">
                     Join the Community
                 </h3>
-                <p className="text-indigo-200 mb-8 text-sm md:text-base leading-relaxed">
+                <p className="text-slate-100 mb-8 text-sm md:text-base leading-relaxed font-light">
                     Get weekly insights on faith, slow living, and finding purpose delivered straight to your inbox. No spam, just heart.
                 </p>
 
@@ -39,7 +39,7 @@ export default function Newsletter() {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
-                            className="flex-1 px-4 py-3 bg-slate-950/50 border border-white/10 focus:outline-none focus:border-indigo-400 transition-colors text-sm rounded-xl text-white placeholder:text-slate-500"
+                            className="flex-1 px-4 py-3 bg-slate-950/50 border border-white/10 focus:outline-none focus:border-indigo-400 transition-colors text-sm rounded-xl text-white placeholder:text-white/40"
                         />
                         <button
                             type="submit"

@@ -31,7 +31,7 @@ export default function AboutPage() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8 }}
-                        className="text-6xl md:text-8xl font-display font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60"
+                        className="text-6xl md:text-8xl font-display font-bold mb-8 text-white"
                     >
                         About Us
                     </motion.h1>
@@ -39,20 +39,20 @@ export default function AboutPage() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="text-xl md:text-2xl text-indigo-100 max-w-3xl mx-auto leading-relaxed font-light"
+                        className="text-xl md:text-2xl text-slate-100 max-w-3xl mx-auto leading-relaxed font-light"
                     >
-                        Navigating modern complexity through <span className="text-white font-medium">faith</span>, reason, and <span className="text-white font-medium">timeless wisdom</span>.
+                        Navigating modern complexity through <span className="text-white font-bold">faith</span>, reason, and <span className="text-white font-bold">timeless wisdom</span>.
                     </motion.p>
                 </section>
 
                 {/* 2. Mission Section */}
                 <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-32 items-stretch">
                     <GlassCard>
-                        <div className="text-xs font-semibold uppercase tracking-widest text-indigo-300 mb-4">Our Mission</div>
-                        <h2 className="text-4xl font-display font-semibold mb-6 leading-tight text-white">
+                        <div className="text-xs font-bold uppercase tracking-widest text-indigo-300 mb-4">Our Mission</div>
+                        <h2 className="text-4xl font-display font-bold mb-6 leading-tight text-white">
                             Bridging ancient wisdom & modern life.
                         </h2>
-                        <div className="space-y-6 text-indigo-100 leading-relaxed text-lg font-light">
+                        <div className="space-y-6 text-slate-100 leading-relaxed text-lg font-light">
                             <p>We believe faith isn't a relic, but a living guide. We explore deep questions with honesty and intellectual rigor.</p>
                             <p>Creating a space where every perspective is valued and dialogue flows freely.</p>
                         </div>
@@ -64,14 +64,14 @@ export default function AboutPage() {
                                 <span className="text-2xl">⚡</span>
                             </div>
                             <h3 className="text-2xl font-display font-bold mb-2 text-white">Authenticity</h3>
-                            <p className="text-indigo-200">Exploring theology and culture without avoiding the hard stuff.</p>
+                            <p className="text-slate-200">Exploring theology and culture without avoiding the hard stuff.</p>
                         </GlassCard>
                         <GlassCard className="flex-1 flex flex-col justify-center">
                             <div className="bg-indigo-500/20 w-14 h-14 flex items-center justify-center rounded-full mb-4 text-indigo-300">
                                 <span className="text-2xl">🤝</span>
                             </div>
                             <h3 className="text-2xl font-display font-bold mb-2 text-white">Community</h3>
-                            <p className="text-indigo-200">Building a table where everyone has a seat.</p>
+                            <p className="text-slate-200">Building a table where everyone has a seat.</p>
                         </GlassCard>
                     </div>
                 </section>
@@ -95,7 +95,7 @@ export default function AboutPage() {
                                         <h3 className="font-bold text-lg text-white">{item.title}</h3>
                                         <span className="text-xs font-mono text-indigo-300 bg-white/10 px-2 py-1 rounded border border-white/5">{item.year}</span>
                                     </div>
-                                    <p className="text-slate-200 text-sm leading-relaxed">{item.desc}</p>
+                                    <p className="text-white text-sm leading-relaxed font-medium">{item.desc}</p>
                                 </GlassCard>
                             </div>
                         ))}
@@ -104,7 +104,7 @@ export default function AboutPage() {
 
                 {/* 4. Team Section */}
                 <section className="mb-32">
-                    <h2 className="text-4xl font-display font-semibold text-center mb-16">Meet the Minds</h2>
+                    <h2 className="text-4xl font-display font-semibold text-center mb-16 text-white">Meet the Minds</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {[
                             { name: "Dr. Sarah Jenkins", role: "Editor in Chief", img: "/images/sarah-editor.png" },
@@ -115,9 +115,9 @@ export default function AboutPage() {
                                     <img src={member.img} alt={member.name} className="object-cover w-full h-full" />
                                 </div>
                                 <div>
-                                    <h3 className="text-2xl font-display font-semibold">{member.name}</h3>
-                                    <p className="text-indigo-400 text-sm uppercase tracking-wider mb-2">{member.role}</p>
-                                    <p className="text-indigo-200/60 text-sm">Passionate about bringing clarity to complex topics.</p>
+                                    <h3 className="text-2xl font-display font-bold text-white">{member.name}</h3>
+                                    <p className="text-indigo-300 text-sm uppercase tracking-wider mb-2 font-semibold">{member.role}</p>
+                                    <p className="text-slate-200 text-sm">Passionate about bringing clarity to complex topics.</p>
                                 </div>
                             </GlassCard>
                         ))}

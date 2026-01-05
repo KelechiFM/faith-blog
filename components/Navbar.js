@@ -17,10 +17,10 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/50 backdrop-blur-md border-b border-white/10">
             <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="text-2xl font-display font-semibold tracking-tight">
+                <Link href="/" className="text-2xl font-display font-semibold tracking-tight text-white">
                     {siteConfig.name}
                 </Link>
 
@@ -30,14 +30,14 @@ export default function Navbar() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-muted hover:text-foreground transition-colors"
+                            className="text-sm font-medium text-slate-200 hover:text-white transition-colors"
                         >
                             {link.name}
                         </Link>
                     ))}
                     <Link
                         href="/blog"
-                        className="px-5 py-2.5 text-sm font-medium bg-foreground text-background rounded-full hover:bg-neutral-800 transition-colors"
+                        className="px-5 py-2.5 text-sm font-bold bg-white text-indigo-950 rounded-full hover:bg-slate-200 transition-colors"
                     >
                         Subscribe
                     </Link>

@@ -11,7 +11,7 @@ export default function Footer() {
                         <Link href="/" className="text-2xl font-display font-semibold tracking-tight text-white">
                             {siteConfig.name}
                         </Link>
-                        <p className="mt-4 text-slate-400 text-sm leading-relaxed max-w-xs">
+                        <p className="mt-4 text-slate-300 text-sm leading-relaxed max-w-xs font-light">
                             {siteConfig.description}
                         </p>
                     </div>
@@ -20,11 +20,11 @@ export default function Footer() {
                     <div>
                         <h4 className="font-semibold text-white mb-4">Explore</h4>
                         <ul className="space-y-3">
-                            <li><Link href="/" className="text-sm text-slate-400 hover:text-white transition-colors">Home</Link></li>
-                            <li><Link href="/blog" className="text-sm text-slate-400 hover:text-white transition-colors">Blog</Link></li>
-                            <li><Link href="/about" className="text-sm text-slate-400 hover:text-white transition-colors">About</Link></li>
-                            <li><Link href="/contact" className="text-sm text-slate-400 hover:text-white transition-colors">Contact</Link></li>
-                            <li><Link href="/media" className="text-sm text-slate-400 hover:text-white transition-colors">Media</Link></li>
+                            <li><Link href="/" className="text-sm text-slate-300 hover:text-white transition-colors">Home</Link></li>
+                            <li><Link href="/blog" className="text-sm text-slate-300 hover:text-white transition-colors">Blog</Link></li>
+                            <li><Link href="/about" className="text-sm text-slate-300 hover:text-white transition-colors">About</Link></li>
+                            <li><Link href="/contact" className="text-sm text-slate-300 hover:text-white transition-colors">Contact</Link></li>
+                            <li><Link href="/media" className="text-sm text-slate-300 hover:text-white transition-colors">Media</Link></li>
                         </ul>
                     </div>
 
@@ -32,9 +32,9 @@ export default function Footer() {
                     <div>
                         <h4 className="font-semibold text-white mb-4">Connect</h4>
                         <ul className="space-y-3">
-                            <li><a href={siteConfig.socials.instagram} className="text-sm text-slate-400 hover:text-white transition-colors">Instagram</a></li>
-                            <li><a href={siteConfig.socials.twitter} className="text-sm text-slate-400 hover:text-white transition-colors">Twitter</a></li>
-                            <li><a href={siteConfig.socials.linkedin} className="text-sm text-slate-400 hover:text-white transition-colors">LinkedIn</a></li>
+                            <li><a href={siteConfig.socials.instagram} className="text-sm text-slate-300 hover:text-white transition-colors">Instagram</a></li>
+                            <li><a href={siteConfig.socials.twitter} className="text-sm text-slate-300 hover:text-white transition-colors">Twitter</a></li>
+                            <li><a href={siteConfig.socials.linkedin} className="text-sm text-slate-300 hover:text-white transition-colors">LinkedIn</a></li>
                         </ul>
                     </div>
                 </div>

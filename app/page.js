@@ -22,8 +22,8 @@ export default function Home() {
       {/* Latest Stories */}
       <section className="mb-24">
         <ScrollReveal className="flex items-end justify-between mb-12">
-          <h2 className="text-4xl lg:text-5xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">Latest Stories</h2>
-          <Link href="/blog" className="hidden md:inline-block text-sm font-medium text-indigo-300 hover:text-white transition-colors">View all articles →</Link>
+          <h2 className="text-4xl lg:text-5xl font-display font-bold text-white">Latest Stories</h2>
+          <Link href="/blog" className="hidden md:inline-block text-sm font-bold text-slate-200 hover:text-white transition-colors">View all articles →</Link>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -39,8 +39,8 @@ export default function Home() {
                     <span className="w-px h-3 bg-indigo-500/30"></span>
                     <span>{post.category}</span>
                   </div>
-                  <h3 className="text-xl font-display font-bold mb-3 leading-snug group-hover:text-indigo-300 transition-colors">{post.title}</h3>
-                  <p className="text-sm text-slate-300 line-clamp-2 mb-4 flex-1">{post.excerpt}</p>
+                  <h3 className="text-xl font-display font-bold mb-3 leading-snug text-white group-hover:text-indigo-300 transition-colors">{post.title}</h3>
+                  <p className="text-sm text-slate-100 line-clamp-2 mb-4 flex-1 font-light">{post.excerpt}</p>
                   <span className="text-xs font-bold text-white uppercase tracking-wider group-hover:text-indigo-300 transition-colors">Read Article</span>
                 </div>
               </Link>

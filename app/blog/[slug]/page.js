@@ -22,21 +22,21 @@ export default async function BlogPostPage({ params }) {
         <article className="max-w-4xl mx-auto px-6 py-12">
             {/* Header */}
             <ScrollReveal className="text-center max-w-2xl mx-auto mb-12">
-                <div className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">
+                <div className="text-sm font-bold uppercase tracking-widest text-indigo-300 mb-4">
                     {post.category}
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-6 leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight text-white">
                     {post.title}
                 </h1>
-                <div className="text-muted text-sm border-t border-b border-border py-4 inline-flex items-center space-x-4">
+                <div className="text-indigo-200 text-sm border-t border-b border-white/10 py-4 inline-flex items-center space-x-4">
                     <span>{post.date}</span>
-                    <span className="w-1 h-1 bg-muted rounded-full"></span>
+                    <span className="w-1 h-1 bg-indigo-400 rounded-full"></span>
                     <span>By Faith</span>
                 </div>
             </ScrollReveal>
 
             {/* Featured Image */}
-            <ScrollReveal className="w-full aspect-video relative overflow-hidden mb-16 rounded-sm bg-muted/10">
+            <ScrollReveal className="w-full aspect-video relative overflow-hidden mb-16 rounded-2xl bg-white/5 border border-white/10 shadow-2xl">
                 <img
                     src={post.image}
                     alt={post.title}
@@ -45,15 +45,15 @@ export default async function BlogPostPage({ params }) {
             </ScrollReveal>
 
             {/* Content */}
-            <div className="max-w-2xl mx-auto prose prose-neutral prose-lg prose-headings:font-display prose-headings:font-semibold prose-a:text-accent prose-img:rounded-sm font-light leading-loose">
+            <div className="max-w-2xl mx-auto prose prose-invert prose-lg prose-headings:font-display prose-headings:font-bold prose-headings:text-white prose-p:text-slate-200 prose-a:text-indigo-300 prose-li:text-slate-200 prose-blockquote:border-l-indigo-400 prose-blockquote:text-indigo-100 font-light leading-loose">
                 <ScrollReveal>
                     <div dangerouslySetInnerHTML={{ __html: post.content }} />
                 </ScrollReveal>
             </div>
 
             {/* Share / Tags Placeholder */}
-            <div className="max-w-2xl mx-auto mt-16 pt-8 border-t border-border">
-                <p className="text-center text-sm font-medium italic text-muted">
+            <div className="max-w-2xl mx-auto mt-16 pt-8 border-t border-white/10">
+                <p className="text-center text-sm font-medium italic text-indigo-200">
                     "Share this with someone who needs a little peace today."
                 </p>
             </div>
