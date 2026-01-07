@@ -1,16 +1,28 @@
 @import "tailwindcss";
 
-:root {
-  --background: #020617;
-  /* Slate 950 */
-  --foreground: #ffffff;
-  /* White */
-  --accent: #d97706;
-  /* Amber/Gold */
-  --muted: #94a3b8;
-  /* Slate 400 */
-  --border: #1e293b;
-  /* Slate 800 */
+@layer theme {
+  :root {
+    --background: #ffffff;
+    /* White */
+    --foreground: #0f172a;
+    /* Slate 900 */
+    --accent: #d97706;
+    --muted: #64748b;
+    /* Slate 500 */
+    --border: #e2e8f0;
+    /* Slate 200 */
+  }
+
+  .dark {
+    --background: #020617;
+    /* Slate 950 */
+    --foreground: #ffffff;
+    --accent: #d97706;
+    --muted: #94a3b8;
+    /* Slate 400 */
+    --border: #1e293b;
+    /* Slate 800 */
+  }
 }
 
 @theme inline {

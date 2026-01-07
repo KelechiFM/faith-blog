@@ -22,26 +22,26 @@ export default function Home() {
       {/* Latest Stories */}
       <section className="mb-24">
         <ScrollReveal className="flex items-end justify-between mb-12">
-          <h2 className="text-4xl lg:text-5xl font-display font-bold text-white">Latest Stories</h2>
-          <Link href="/blog" className="hidden md:inline-block text-sm font-bold text-slate-200 hover:text-white transition-colors">View all articles →</Link>
+          <h2 className="text-4xl lg:text-5xl font-display font-bold text-slate-900 dark:text-white transition-colors duration-300">Latest Stories</h2>
+          <Link href="/blog" className="hidden md:inline-block text-sm font-bold text-slate-600 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-white transition-colors">View all articles →</Link>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {latestPosts.map((post, i) => (
+          {posts.filter(p => !p.featured).map((post, i) => (
             <GlassCard key={post.id} className="h-full !p-0 overflow-hidden group flex flex-col transition-all hover:scale-[1.02]" delay={0.1 * i}>
               <Link href={`/blog/${post.slug}`} className="flex flex-col h-full">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img src={post.image} alt={post.title} className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" />
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
-                  <div className="flex items-center gap-3 mb-3 text-xs font-mono text-indigo-300">
+                  <div className="flex items-center gap-3 mb-3 text-xs font-mono text-indigo-600 dark:text-indigo-300">
                     <span>{post.date}</span>
-                    <span className="w-px h-3 bg-indigo-500/30"></span>
+                    <span className="w-px h-3 bg-slate-300 dark:bg-indigo-500/30"></span>
                     <span>{post.category}</span>
                   </div>
-                  <h3 className="text-xl font-display font-bold mb-3 leading-snug text-white group-hover:text-indigo-300 transition-colors">{post.title}</h3>
-                  <p className="text-sm text-slate-100 line-clamp-2 mb-4 flex-1 font-light">{post.excerpt}</p>
-                  <span className="text-xs font-bold text-white uppercase tracking-wider group-hover:text-indigo-300 transition-colors">Read Article</span>
+                  <h3 className="text-xl font-display font-bold mb-3 leading-snug text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors">{post.title}</h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-100 line-clamp-2 mb-4 flex-1 font-light">{post.excerpt}</p>
+                  <span className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors">Read Article</span>
                 </div>
               </Link>
             </GlassCard>

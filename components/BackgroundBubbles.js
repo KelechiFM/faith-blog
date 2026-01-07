@@ -15,11 +15,11 @@ export default function BackgroundBubbles() {
 
     return (
         <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950" />
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-purple-50 to-white dark:from-indigo-950 dark:via-purple-950 dark:to-slate-950 transition-colors duration-500" />
             {bubbles.map((_, i) => (
                 <motion.div
                     key={i}
-                    className="absolute bg-white/10 rounded-full"
+                    className="absolute bg-indigo-500/5 dark:bg-white/10 rounded-full"
                     initial={{
                         opacity: 0,
                         y: "110vh",
