@@ -19,7 +19,7 @@ export default function AboutPage() {
     };
 
     return (
-        <div className="relative bg-slate-950 min-h-screen text-white overflow-hidden pb-32">
+        <div className="relative  min-h-screen text-white overflow-hidden pb-32">
 
             {/* Background Handled in Layout */}
 

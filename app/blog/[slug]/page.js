@@ -45,8 +45,16 @@ export default async function BlogPostPage({ params }) {
             </ScrollReveal>
 
             {/* Content */}
-            {/* Content */}
-            <div className="max-w-2xl mx-auto prose prose-xl prose-invert prose-headings:font-display prose-headings:font-bold prose-headings:!text-white prose-p:!text-slate-100 prose-a:!text-white prose-a:underline prose-li:!text-slate-100 prose-strong:!text-white prose-blockquote:!border-l-white prose-blockquote:!text-slate-100 font-light leading-loose [&_p]:!text-white [&_li]:!text-white [&_h1]:!text-white [&_h2]:!text-white [&_h3]:!text-white [&_blockquote]:!text-white [&_strong]:!text-white">
+            <div className={`
+                max-w-2xl mx-auto 
+                prose prose-xl prose-invert 
+                prose-headings:font-display prose-headings:font-bold prose-headings:!text-white 
+                prose-p:!text-slate-100 prose-li:!text-slate-100 prose-strong:!text-white 
+                prose-a:!text-white prose-a:underline 
+                prose-blockquote:!border-l-white prose-blockquote:!text-slate-100 
+                font-light leading-loose 
+                [&_p]:!text-white [&_li]:!text-white [&_h1]:!text-white [&_h2]:!text-white [&_h3]:!text-white [&_blockquote]:!text-white [&_strong]:!text-white
+            `}>
                 <ScrollReveal>
                     <div dangerouslySetInnerHTML={{ __html: post.content }} />
                 </ScrollReveal>

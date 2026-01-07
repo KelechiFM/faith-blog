@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/data";
 
 export default function Footer() {
     return (
-        <footer className="bg-slate-950/30 border-t border-white/10 mt-auto backdrop-blur-sm">
+        <footer className="bg-slate-950/50 border-t border-white/10 mt-auto backdrop-blur-md">
             <div className="max-w-6xl mx-auto px-6 py-12 md:py-16">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8">
                     {/* Brand */}
@@ -32,9 +32,9 @@ export default function Footer() {
                     <div>
                         <h4 className="font-semibold text-white mb-4">Connect</h4>
                         <ul className="space-y-3">
-                            <li><a href={siteConfig.socials.instagram} className="text-sm text-slate-300 hover:text-white transition-colors">Instagram</a></li>
-                            <li><a href={siteConfig.socials.twitter} className="text-sm text-slate-300 hover:text-white transition-colors">Twitter</a></li>
-                            <li><a href={siteConfig.socials.linkedin} className="text-sm text-slate-300 hover:text-white transition-colors">LinkedIn</a></li>
+                            <li><a href={siteConfig.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-sm text-slate-300 hover:text-white transition-colors">Instagram</a></li>
+                            <li><a href={siteConfig.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-sm text-slate-300 hover:text-white transition-colors">Twitter</a></li>
+                            <li><a href={siteConfig.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm text-slate-300 hover:text-white transition-colors">LinkedIn</a></li>
                         </ul>
                     </div>
                 </div>

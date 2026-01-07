@@ -13,11 +13,12 @@ export default function Navbar() {
         { name: "Home", href: "/" },
         { name: "Blog", href: "/blog" },
         { name: "About", href: "/about" },
+        { name: "Media", href: "/media" },
         { name: "Contact", href: "/contact" },
     ];
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/50 backdrop-blur-md border-b border-white/10">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950 backdrop-blur-md border-b border-white/10">
             <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="text-2xl font-display font-semibold tracking-tight text-white">
@@ -36,7 +37,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <Link
-                        href="/blog"
+                        href="/pricing"
                         className="px-5 py-2.5 text-sm font-bold bg-white text-indigo-950 rounded-full hover:bg-slate-200 transition-colors"
                     >
                         Subscribe
